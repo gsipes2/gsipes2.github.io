@@ -95,14 +95,14 @@
     "href": "index.html#quick-links",
     "title": "Griffin C. Sipes",
     "section": "Quick Links",
-    "text": "Quick Links\n\nCV (PDF): add files/CV.pdf and I will link it here.\nProjects: projects.qmd and tutorials.qmd (auto-generated lists)\nNotebooks: notebooks/ (open in Colab when available)\nPublications: add publications.qmd or references.bib to populate."
+    "text": "Quick Links\n\nCV (PDF): add files/CV.pdf and I will link it here.\nProjects: Projects\nTutorials: Tutorials\nPublications: add publications.qmd or references.bib to populate."
   },
   {
     "objectID": "index.html#contact",
     "href": "index.html#contact",
     "title": "Griffin C. Sipes",
     "section": "Contact",
-    "text": "Contact\n\nEmail: gsipes2@illinois.edu\nGitHub: https://github.com/gsipes2"
+    "text": "Contact"
   },
   {
     "objectID": "notebooks.html",
