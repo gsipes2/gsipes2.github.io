@@ -1,0 +1,39 @@
+---
+title: Notebooks
+---
+title: Notebooks
+format: html
+---
+
+<!-- Interactive launch badges for the example notebook -->
+
+<div class="launch-notebook" style="margin-bottom:1rem;">
+   <a class="btn btn-primary" href="https://colab.research.google.com/github/gsipes2/gsipes2.github.io/blob/main/notebooks/IntroductionImageProcessing.ipynb" target="_blank" rel="noopener">Open IntroductionImageProcessing in Colab</a>
+   <a class="btn btn-secondary" href="https://mybinder.org/v2/gh/gsipes2/gsipes2.github.io/main?urlpath=lab/tree/notebooks/IntroductionImageProcessing.ipynb" target="_blank" rel="noopener" style="margin-left:0.5rem;">Launch on Binder</a>
+   <a class="btn btn-outline-info" href="/jupyterlite/index.html?path=notebooks/IntroductionImageProcessing.ipynb" target="_blank" rel="noopener" style="margin-left:0.5rem;">Open in JupyterLite (if available)</a>
+</div>
+
+This site can include Jupyter notebooks (`.ipynb`) in two common ways.
+
+1. Render the notebook as a standalone page using Quarto
+
+   - Place notebooks in a `notebooks/` folder (e.g. `notebooks/example.ipynb`).
+   - Render it with `quarto render notebooks/example.ipynb` which will produce an HTML page in `_site/` (or the site output folder).
+   - Link to the produced HTML from your site navigation or pages.
+
+2. Include notebook content inside a `.qmd` page (convert or execute)
+
+   - You can include the notebook output by converting it to Quarto-compatible content or by embedding the HTML output.
+   - Example: in a `.qmd` file you can use an iframe to embed the rendered notebook HTML:
+
+```
+<iframe src="notebooks/example.html" style="width:100%;height:800px;border:0"></iframe>
+```
+
+Tips:
+
+- Use `quarto render` to convert `.ipynb` to HTML (Quarto will execute notebooks when rendering if execution is enabled).
+- Ensure any data or resources used by the notebook are committed or in paths resolvable from the site root.
+- If you prefer dynamic execution during site builds, enable `execute: true` in the notebook's YAML or in `_quarto.yml`.
+
+If you want, I can also add a small example `notebooks/example.ipynb` and a build script to automatically render notebooks during site build.

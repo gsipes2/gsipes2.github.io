@@ -1,0 +1,49 @@
+<!-- Thebe + Binder initializer: loads Thebe and converts Python code blocks to executable cells -->
+<script src="https://unpkg.com/thebe@latest/lib/index.js"></script>
+<script>
+// Wrap Python code blocks in a container Thebe recognizes and bootstrap Thebe with Binder
+document.addEventListener('DOMContentLoaded', function () {
+  try {
+    const codeSelectors = [
+      'pre > code.language-python',
+      'pre > code.lang-py',
+      'pre > code[data-lang="python"]'
+    ];
+    const codes = document.querySelectorAll(codeSelectors.join(','));
+    codes.forEach(code => {
+      const pre = code.parentElement;
+      if (!pre) return;
+      if (pre.closest('.thebe')) return; // already wrapped
+
+      // Create wrapper div required by Thebe
+      const wrapper = document.createElement('div');
+      wrapper.className = 'thebe';
+
+      // Mark the pre as executable and indicate language
+      pre.setAttribute('data-executable', 'true');
+      pre.setAttribute('data-language', 'python');
+
+      // Move the pre inside the wrapper
+      pre.parentNode.insertBefore(wrapper, pre);
+      wrapper.appendChild(pre);
+    });
+
+    // Bootstrap thebelab with Binder options
+    // NOTE: adjust repo/ref/binderUrl if you fork or use a different branch or Binder service
+    if (window.thebelab) {
+      thebelab.bootstrap({
+        requestKernel: true,
+        binderOptions: {
+          repo: 'gsipes2/gsipes2.github.io',
+          ref: 'main',
+          binderUrl: 'https://mybinder.org'
+        }
+      });
+    } else {
+      console.warn('thebelab not available yet');
+    }
+  } catch (err) {
+    console.error('Thebe initializer failed:', err);
+  }
+});
+</script>
