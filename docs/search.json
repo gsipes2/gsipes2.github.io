@@ -81,49 +81,28 @@
     "href": "index.html",
     "title": "Griffin C. Sipes",
     "section": "",
-    "text": "I am a PhD student in Mechanical Engineering focused on biomechanics, adapted exercise, wearable sensors, and computer vision. I develop reproducible analyses, interactive tutorials, and open-source tools to measure and model human movement."
+    "text": "PhD student in Mechanical Engineering (UIUC). My biomechanics research focuses on using wearable sensors and computer vision for analyzing adapted exercise."
   },
   {
     "objectID": "index.html#about",
     "href": "index.html#about",
     "title": "Griffin C. Sipes",
     "section": "",
-    "text": "I am a PhD student in Mechanical Engineering focused on biomechanics, adapted exercise, wearable sensors, and computer vision. I develop reproducible analyses, interactive tutorials, and open-source tools to measure and model human movement."
+    "text": "PhD student in Mechanical Engineering (UIUC). My biomechanics research focuses on using wearable sensors and computer vision for analyzing adapted exercise."
   },
   {
-    "objectID": "index.html#research-areas",
-    "href": "index.html#research-areas",
+    "objectID": "index.html#quick-links",
+    "href": "index.html#quick-links",
     "title": "Griffin C. Sipes",
-    "section": "Research Areas",
-    "text": "Research Areas\n\nBiomechanics & human movement analysis\nAdapted exercise interventions and outcome measurement\nWearable sensors, signal processing, and validation\nComputer vision and motion capture\nDeep learning for pose estimation and timeseries predictions"
+    "section": "Quick Links",
+    "text": "Quick Links\n\nCV (PDF): add files/CV.pdf and I will link it here.\nProjects: projects.qmd and tutorials.qmd (auto-generated lists)\nNotebooks: notebooks/ (open in Colab when available)\nPublications: add publications.qmd or references.bib to populate."
   },
   {
-    "objectID": "index.html#selected-projects",
-    "href": "index.html#selected-projects",
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
     "title": "Griffin C. Sipes",
-    "section": "Selected Projects",
-    "text": "Selected Projects\n\nnotebooks/IntroductionImageProcessing.ipynb — image-based feature extraction and preprocessing (notebook).\nTutorials & Projects — auto-generated listings: see tutorials.qmd and projects.qmd."
-  },
-  {
-    "objectID": "index.html#publications",
-    "href": "index.html#publications",
-    "title": "Griffin C. Sipes",
-    "section": "Publications",
-    "text": "Publications\nPublications will be listed here. To populate this section, add a publications.qmd file or a references.bib bibliography and I can add an automated publications list."
-  },
-  {
-    "objectID": "index.html#teaching-mentoring",
-    "href": "index.html#teaching-mentoring",
-    "title": "Griffin C. Sipes",
-    "section": "Teaching & Mentoring",
-    "text": "Teaching & Mentoring\nTeaching and mentoring experience will be listed here."
-  },
-  {
-    "objectID": "index.html#contact-links",
-    "href": "index.html#contact-links",
-    "title": "Griffin C. Sipes",
-    "section": "Contact & Links",
-    "text": "Contact & Links\n\nEmail: gsipes2@illinois.edu\nGitHub: https://github.com/gsipes2\nCV: add files/CV.pdf and link it here (I’ll help add the link).\nNotebooks: notebooks/ (openable in Google Colab where available)"
+    "section": "Contact",
+    "text": "Contact\n\nEmail: gsipes2@illinois.edu\nGitHub: https://github.com/gsipes2"
   },
   {
     "objectID": "notebooks.html",
