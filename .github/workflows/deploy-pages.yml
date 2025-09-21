@@ -28,13 +28,30 @@ jobs:
         run: |
           conda install -y -c conda-forge quarto
 
-      - name: Install Quarto CLI
+      - name: Install Quarto CLI (robust)
         run: |
-          echo "Downloading Quarto CLI..."
-          wget -qO quarto.tar.gz "https://github.com/quarto-dev/quarto-cli/releases/latest/download/quarto-linux-amd64.tar.gz"
+          set -euo pipefail
+          if command -v quarto >/dev/null 2>&1; then
+            echo "Quarto already installed: $(quarto --version)"
+            exit 0
+          fi
+          # Try apt (not likely to have latest but quick)
+          if sudo apt-get update && sudo apt-get install -y quarto; then
+            echo "Installed Quarto via apt"
+            quarto --version
+            exit 0
+          fi
+          # Download official tarball with retries
+          URL="https://github.com/quarto-dev/quarto-cli/releases/latest/download/quarto-linux-amd64.tar.gz"
+          echo "Downloading Quarto CLI from $URL"
+          for i in 1 2 3; do
+            curl -fsSL -o quarto.tar.gz "$URL" && break || echo "download failed, retrying ($i)" && sleep 2
+          done
           mkdir -p quarto-temp
           tar -xzf quarto.tar.gz -C quarto-temp
+          # Copy binaries to /usr/local/bin
           sudo cp -r quarto-temp/*/bin/* /usr/local/bin/
+          chmod +x /usr/local/bin/quarto || true
           quarto --version
 
       - name: Render Quarto site
