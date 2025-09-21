@@ -37,10 +37,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b651517ce65839d647a86e2780455cfb.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-251603f34fb100524ce6c94bd8510ba7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-812b6faf5bfc829b3e56fdeeaa55c95f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -97,12 +97,12 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./notebooks.html"> 
-<span class="menu-text">Notebooks</span></a>
+    <a class="nav-link" href="./tutorials.html"> 
+<span class="menu-text">Tutorials</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./notebooks/IntroductionImageProcessing.html"> 
-<span class="menu-text">Introduction to Image Processing</span></a>
+    <a class="nav-link" href="./projects.html"> 
+<span class="menu-text">Projects</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -146,104 +146,6 @@ ul.task-list li input[type="checkbox"] {
 
 
 </main> <!-- /main -->
-<!-- Thebe + Binder initializer: loads Thebe and converts Python code blocks to executable cells -->
-
-<script src="https://unpkg.com/thebe@latest/lib/index.js"></script>
-
-<script>
-
-// Wrap Python code blocks in a container Thebe recognizes and bootstrap Thebe with Binder
-
-document.addEventListener('DOMContentLoaded', function () {
-
-  try {
-
-    const codeSelectors = [
-
-      'pre > code.language-python',
-
-      'pre > code.lang-py',
-
-      'pre > code[data-lang="python"]'
-
-    ];
-
-    const codes = document.querySelectorAll(codeSelectors.join(','));
-
-    codes.forEach(code => {
-
-      const pre = code.parentElement;
-
-      if (!pre) return;
-
-      if (pre.closest('.thebe')) return; // already wrapped
-
-
-
-      // Create wrapper div required by Thebe
-
-      const wrapper = document.createElement('div');
-
-      wrapper.className = 'thebe';
-
-
-
-      // Mark the pre as executable and indicate language
-
-      pre.setAttribute('data-executable', 'true');
-
-      pre.setAttribute('data-language', 'python');
-
-
-
-      // Move the pre inside the wrapper
-
-      pre.parentNode.insertBefore(wrapper, pre);
-
-      wrapper.appendChild(pre);
-
-    });
-
-
-
-    // Bootstrap thebelab with Binder options
-
-    // NOTE: adjust repo/ref/binderUrl if you fork or use a different branch or Binder service
-
-    if (window.thebelab) {
-
-      thebelab.bootstrap({
-
-        requestKernel: true,
-
-        binderOptions: {
-
-          repo: 'gsipes2/gsipes2.github.io',
-
-          ref: 'main',
-
-          binderUrl: 'https://mybinder.org'
-
-        }
-
-      });
-
-    } else {
-
-      console.warn('thebelab not available yet');
-
-    }
-
-  } catch (err) {
-
-    console.error('Thebe initializer failed:', err);
-
-  }
-
-});
-
-</script>
-
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

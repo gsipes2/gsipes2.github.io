@@ -7,19 +7,18 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: notebooks.qmd
-        text: Notebooks
-      - href: "notebooks/IntroductionImageProcessing.ipynb"
-        text: "Introduction to Image Processing"
+      - href: tutorials.qmd
+        text: Tutorials
+      - href: projects.qmd
+        text: Projects
 
 format:
   html:
     theme:
-      - quartz
+      - vapor
       - brand
     css: styles.css
     toc: true
-    include-after-body: assets/thebe-init.html
 
 
 

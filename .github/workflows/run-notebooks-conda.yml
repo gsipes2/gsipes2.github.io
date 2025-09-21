@@ -1,0 +1,45 @@
+name: Run Notebooks (Conda)
+
+on:
+  push:
+    paths:
+      - 'notebooks/**'
+
+jobs:
+  run-notebooks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run notebook index generator
+        run: |
+          python scripts/generate_notebook_pages.py
+      - name: Commit generated pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tutorials.qmd projects.qmd || true
+          git commit -m "Auto-generate tutorials/projects pages" || echo "no changes"
+          git push || echo "push failed"
+      - name: Setup Miniconda
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+          auto-update-conda: true
+          python-version: 3.11
+          activate-environment: env-quarto
+          environment-file: environment.yml
+      - name: Install papermill and nbconvert
+        run: |
+          conda run -n env-quarto pip install --upgrade pip
+          conda run -n env-quarto pip install papermill nbconvert
+      - name: Execute notebook
+        run: |
+          mkdir -p _site/notebooks
+          conda run -n env-quarto papermill notebooks/IntroductionImageProcessing.ipynb _site/notebooks/IntroductionImageProcessing.ipynb
+          conda run -n env-quarto jupyter nbconvert --to html _site/notebooks/IntroductionImageProcessing.ipynb --output _site/notebooks/IntroductionImageProcessing.html
+      - name: Commit outputs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add _site/notebooks/IntroductionImageProcessing.html || true
+          git commit -m "Auto-run notebook outputs" || echo "no changes"
+          git push || echo "push failed"

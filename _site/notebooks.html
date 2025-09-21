@@ -37,10 +37,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b651517ce65839d647a86e2780455cfb.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-251603f34fb100524ce6c94bd8510ba7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-812b6faf5bfc829b3e56fdeeaa55c95f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -97,12 +97,12 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./notebooks.html" aria-current="page"> 
-<span class="menu-text">Notebooks</span></a>
+    <a class="nav-link" href="./tutorials.html"> 
+<span class="menu-text">Tutorials</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./notebooks/IntroductionImageProcessing.html"> 
-<span class="menu-text">Introduction to Image Processing</span></a>
+    <a class="nav-link" href="./projects.html"> 
+<span class="menu-text">Projects</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -140,10 +140,38 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>title: Notebooks format: html —</p>
+<div class="launch-notebook" style="margin-bottom:1rem;">
+<p><a class="btn btn-primary" href="https://colab.research.google.com/github/gsipes2/gsipes2.github.io/blob/main/notebooks/IntroductionImageProcessing.ipynb" target="_blank" rel="noopener">Open IntroductionImageProcessing in Colab</a></p>
+</div>
+<p>This site can include Jupyter notebooks (<code>.ipynb</code>) in two common ways.</p>
+<ol type="1">
+<li><p>Render the notebook as a standalone page using Quarto</p>
+<ul>
+<li>Place notebooks in a <code>notebooks/</code> folder (e.g.&nbsp;<code>notebooks/example.ipynb</code>).</li>
+<li>Render it with <code>quarto render notebooks/example.ipynb</code> which will produce an HTML page in <code>_site/</code> (or the site output folder).</li>
+<li>Link to the produced HTML from your site navigation or pages.</li>
+</ul></li>
+<li><p>Include notebook content inside a <code>.qmd</code> page (convert or execute)</p>
+<ul>
+<li>You can include the notebook output by converting it to Quarto-compatible content or by embedding the HTML output.</li>
+<li>Example: in a <code>.qmd</code> file you can use an iframe to embed the rendered notebook HTML:</li>
+</ul></li>
+</ol>
+<pre><code>&lt;iframe src="notebooks/example.html" style="width:100%;height:800px;border:0"&gt;&lt;/iframe&gt;</code></pre>
+<p>Tips:</p>
+<ul>
+<li>Use <code>quarto render</code> to convert <code>.ipynb</code> to HTML (Quarto will execute notebooks when rendering if execution is enabled).</li>
+<li>Ensure any data or resources used by the notebook are committed or in paths resolvable from the site root.</li>
+<li>If you prefer dynamic execution during site builds, enable <code>execute: true</code> in the notebook’s YAML or in <code>_quarto.yml</code>.</li>
+</ul>
+<p>If you want, I can also add a small example <code>notebooks/example.ipynb</code> and a build script to automatically render notebooks during site build. title: Notebooks title: Notebooks format: html</p>
 <!-- Interactive launch badges for the example notebook -->
 <div class="launch-notebook" style="margin-bottom:1rem;">
 <p><a class="btn btn-primary" href="https://colab.research.google.com/github/gsipes2/gsipes2.github.io/blob/main/notebooks/IntroductionImageProcessing.ipynb" target="_blank" rel="noopener">Open IntroductionImageProcessing in Colab</a> <a class="btn btn-secondary" href="https://mybinder.org/v2/gh/gsipes2/gsipes2.github.io/main?urlpath=lab/tree/notebooks/IntroductionImageProcessing.ipynb" target="_blank" rel="noopener" style="margin-left:0.5rem;">Launch on Binder</a> <a class="btn btn-outline-info" href="./jupyterlite/index.html?path=notebooks/IntroductionImageProcessing.ipynb" target="_blank" rel="noopener" style="margin-left:0.5rem;">Open in JupyterLite (if available)</a></p>
+</div>
+<!-- Interactive launch badge for the example notebook -->
+<div class="launch-notebook" style="margin-bottom:1rem;">
+<p><a class="btn btn-primary" href="https://colab.research.google.com/github/gsipes2/gsipes2.github.io/blob/main/notebooks/IntroductionImageProcessing.ipynb" target="_blank" rel="noopener">Open IntroductionImageProcessing in Colab</a></p>
 </div>
 <p>This site can include Jupyter notebooks (<code>.ipynb</code>) in two common ways.</p>
 <ol type="1">
@@ -171,104 +199,6 @@ ul.task-list li input[type="checkbox"] {
 
 
 </main> <!-- /main -->
-<!-- Thebe + Binder initializer: loads Thebe and converts Python code blocks to executable cells -->
-
-<script src="https://unpkg.com/thebe@latest/lib/index.js"></script>
-
-<script>
-
-// Wrap Python code blocks in a container Thebe recognizes and bootstrap Thebe with Binder
-
-document.addEventListener('DOMContentLoaded', function () {
-
-  try {
-
-    const codeSelectors = [
-
-      'pre > code.language-python',
-
-      'pre > code.lang-py',
-
-      'pre > code[data-lang="python"]'
-
-    ];
-
-    const codes = document.querySelectorAll(codeSelectors.join(','));
-
-    codes.forEach(code => {
-
-      const pre = code.parentElement;
-
-      if (!pre) return;
-
-      if (pre.closest('.thebe')) return; // already wrapped
-
-
-
-      // Create wrapper div required by Thebe
-
-      const wrapper = document.createElement('div');
-
-      wrapper.className = 'thebe';
-
-
-
-      // Mark the pre as executable and indicate language
-
-      pre.setAttribute('data-executable', 'true');
-
-      pre.setAttribute('data-language', 'python');
-
-
-
-      // Move the pre inside the wrapper
-
-      pre.parentNode.insertBefore(wrapper, pre);
-
-      wrapper.appendChild(pre);
-
-    });
-
-
-
-    // Bootstrap thebelab with Binder options
-
-    // NOTE: adjust repo/ref/binderUrl if you fork or use a different branch or Binder service
-
-    if (window.thebelab) {
-
-      thebelab.bootstrap({
-
-        requestKernel: true,
-
-        binderOptions: {
-
-          repo: 'gsipes2/gsipes2.github.io',
-
-          ref: 'main',
-
-          binderUrl: 'https://mybinder.org'
-
-        }
-
-      });
-
-    } else {
-
-      console.warn('thebelab not available yet');
-
-    }
-
-  } catch (err) {
-
-    console.error('Thebe initializer failed:', err);
-
-  }
-
-});
-
-</script>
-
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
