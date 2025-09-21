@@ -42,14 +42,14 @@ jobs:
           for i in 1 2 3; do
             curl -fsSL -o quarto.tar.gz "$URL" && break || (echo "download failed, retrying ($i)" && sleep 2)
           done
-          mkdir -p quarto-temp
-          tar -xzf quarto.tar.gz -C quarto-temp
-          QUARTO_DIR=$(echo quarto-temp/* | awk '{print $1}')
+          mkdir -p "$RUNNER_TEMP/quarto-temp"
+          tar -xzf quarto.tar.gz -C "$RUNNER_TEMP/quarto-temp"
+          QUARTO_DIR=$(echo "$RUNNER_TEMP/quarto-temp"/* | awk '{print $1}')
           echo "Using extracted Quarto at: $QUARTO_DIR"
-          echo "$PWD/$QUARTO_DIR/bin" >> $GITHUB_PATH
-          export PATH="$PWD/$QUARTO_DIR/bin:$PATH"
-          echo "Quarto path: $(which quarto || echo '$QUARTO_DIR/bin/quarto')"
-          "$PWD/$QUARTO_DIR/bin/quarto" --version
+          echo "$QUARTO_DIR/bin" >> $GITHUB_PATH
+          export PATH="$QUARTO_DIR/bin:$PATH"
+          echo "Quarto path: $(ls "$QUARTO_DIR/bin")"
+          "$QUARTO_DIR/bin/quarto" --version
 
       - name: Render Quarto site
         run: |
