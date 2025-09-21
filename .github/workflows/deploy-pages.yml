@@ -18,10 +18,19 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Render Quarto site
-        uses: quarto-dev/quarto-action@v2
+      - name: Setup Miniconda
+        uses: conda-incubator/setup-miniconda@v2
         with:
-          command: render
+          auto-update-conda: true
+          python-version: 3.11
+
+      - name: Install Quarto via conda-forge
+        run: |
+          conda install -y -c conda-forge quarto
+
+      - name: Render Quarto site
+        run: |
+          quarto render
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v1
