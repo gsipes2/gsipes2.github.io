@@ -64,7 +64,7 @@ jobs:
           ls -la _site || true
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v4
         with:
           name: github-pages
           path: ./_site
