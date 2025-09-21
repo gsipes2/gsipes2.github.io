@@ -55,7 +55,7 @@ jobs:
         run: |
           quarto render
 
-      - name: Debug: show run info and site contents
+      - name: "Debug: show run info and site contents"
         run: |
           echo "GITHUB_RUN_ID=$GITHUB_RUN_ID"
           echo "GITHUB_RUN_NUMBER=$GITHUB_RUN_NUMBER"
