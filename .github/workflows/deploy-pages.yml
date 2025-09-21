@@ -47,8 +47,9 @@ jobs:
           QUARTO_DIR=$(echo quarto-temp/* | awk '{print $1}')
           echo "Using extracted Quarto at: $QUARTO_DIR"
           echo "$PWD/$QUARTO_DIR/bin" >> $GITHUB_PATH
-          echo "Quarto path: $(ls $QUARTO_DIR/bin)"
-          quarto --version
+          export PATH="$PWD/$QUARTO_DIR/bin:$PATH"
+          echo "Quarto path: $(which quarto || echo '$QUARTO_DIR/bin/quarto')"
+          "$PWD/$QUARTO_DIR/bin/quarto" --version
 
       - name: Render Quarto site
         run: |
