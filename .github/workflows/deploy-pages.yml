@@ -55,9 +55,18 @@ jobs:
         run: |
           quarto render
 
+      - name: Debug: show run info and site contents
+        run: |
+          echo "GITHUB_RUN_ID=$GITHUB_RUN_ID"
+          echo "GITHUB_RUN_NUMBER=$GITHUB_RUN_NUMBER"
+          echo "GITHUB_RUN_ATTEMPT=$GITHUB_RUN_ATTEMPT"
+          echo "Listing _site contents (if any):"
+          ls -la _site || true
+
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v2
         with:
+          name: github-pages
           path: ./_site
 
   deploy:
