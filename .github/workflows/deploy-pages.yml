@@ -24,34 +24,30 @@ jobs:
           auto-update-conda: true
           python-version: 3.11
 
-      - name: Install Quarto via conda-forge
-        run: |
-          conda install -y -c conda-forge quarto
-
-      - name: Install Quarto CLI (robust)
+      - name: Install Quarto CLI (local, no sudo)
         run: |
           set -euo pipefail
           if command -v quarto >/dev/null 2>&1; then
             echo "Quarto already installed: $(quarto --version)"
             exit 0
           fi
-          # Try apt (not likely to have latest but quick)
+          # Try apt quickly (may not be available)
           if sudo apt-get update && sudo apt-get install -y quarto; then
             echo "Installed Quarto via apt"
             quarto --version
             exit 0
           fi
-          # Download official tarball with retries
-          URL="https://github.com/quarto-dev/quarto-cli/releases/download/v1.8.24/quarto-1.8.24-linux-amd64.tar.gz"
+          URL="https://github.com/quarto-dev/quarto-cli/releases/latest/download/quarto-linux-amd64.tar.gz"
           echo "Downloading Quarto CLI from $URL"
           for i in 1 2 3; do
-            curl -fsSL -o quarto.tar.gz "$URL" && break || echo "download failed, retrying ($i)" && sleep 2
+            curl -fsSL -o quarto.tar.gz "$URL" && break || (echo "download failed, retrying ($i)" && sleep 2)
           done
           mkdir -p quarto-temp
           tar -xzf quarto.tar.gz -C quarto-temp
-          # Copy binaries to /usr/local/bin
-          sudo cp -r quarto-temp/*/bin/* /usr/local/bin/
-          chmod +x /usr/local/bin/quarto || true
+          QUARTO_DIR=$(echo quarto-temp/* | awk '{print $1}')
+          echo "Using extracted Quarto at: $QUARTO_DIR"
+          echo "$PWD/$QUARTO_DIR/bin" >> $GITHUB_PATH
+          echo "Quarto path: $(ls $QUARTO_DIR/bin)"
           quarto --version
 
       - name: Render Quarto site
@@ -59,7 +55,7 @@ jobs:
           quarto render
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v2
         with:
           path: ./_site
 
