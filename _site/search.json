@@ -23,16 +23,16 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "gsipes2.github.io",
+    "title": "Griffin C. Sipes",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "title: “Griffin C. Sipes” description: “Portfolio — Griffin Sipes: image processing, computational imaging, and reproducible research.” image: assets/hero.png —"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site"
+    "text": "C"
   },
   {
     "objectID": "notebooks/IntroductionImageProcessing.html",
@@ -81,13 +81,83 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "No projects found."
+    "text": "C"
   },
   {
     "objectID": "projects.html#projects",
     "href": "projects.html#projects",
     "title": "Projects",
     "section": "",
-    "text": "No projects found."
+    "text": "C"
+  },
+  {
+    "objectID": "index.html#about",
+    "href": "index.html#about",
+    "title": "Griffin C. Sipes",
+    "section": "About",
+    "text": "About\nI work in the Tissue Biomechanics Laboratory, where I investigate propulsion biomechanics and musculoskeletal loading during wheelchair-based exercises enabled by wearable sensors, machine learning, and computer vision techniques. One of my interests is building tools and tutorials to make biomechanics research more accessible by utilizing open-source workflows."
+  },
+  {
+    "objectID": "index.html#featured-sections",
+    "href": "index.html#featured-sections",
+    "title": "Griffin C. Sipes",
+    "section": "Featured Sections",
+    "text": "Featured Sections\n\nTutorials — Step-by-step guides and teaching materials.\nProjects — Portfolio projects."
+  },
+  {
+    "objectID": "index.html#quick-links",
+    "href": "index.html#quick-links",
+    "title": "Griffin C. Sipes",
+    "section": "Quick Links",
+    "text": "Quick Links\n\nAbout\nTutorials\nProjects"
+  },
+  {
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "Griffin C. Sipes",
+    "section": "Contact",
+    "text": "Contact\nIf you’d like to get in touch, find me on"
+  },
+  {
+    "objectID": "index.html#welcome-im-griffin-sipes.i-am-a-fourth-year-phd-student-in-mechanical-engineering-at-the-university-of-illinois-urbana-champaign.-i-work-in-the-tissue-biomechanics-laboratory-where-i-use-markerless-motion-capture-and-wearable-sensors-to-investigate-musculoskeletal-loading-and-cardiopulmonary-stimuli-during-wheelchair-based-exercises-in-order-to-develop-informed-exercise-recommendations-for-manual-wheelchair-users.",
+    "href": "index.html#welcome-im-griffin-sipes.i-am-a-fourth-year-phd-student-in-mechanical-engineering-at-the-university-of-illinois-urbana-champaign.-i-work-in-the-tissue-biomechanics-laboratory-where-i-use-markerless-motion-capture-and-wearable-sensors-to-investigate-musculoskeletal-loading-and-cardiopulmonary-stimuli-during-wheelchair-based-exercises-in-order-to-develop-informed-exercise-recommendations-for-manual-wheelchair-users.",
+    "title": "Griffin C. Sipes",
+    "section": "Welcome — I’m Griffin Sipes.I am a fourth-year PhD student in mechanical engineering at the University of Illinois Urbana-Champaign. I work in the Tissue Biomechanics Laboratory, where I use markerless motion capture and wearable sensors to investigate musculoskeletal loading and cardiopulmonary stimuli during wheelchair-based exercises in order to develop informed exercise recommendations for manual wheelchair users.",
+    "text": "Welcome — I’m Griffin Sipes.I am a fourth-year PhD student in mechanical engineering at the University of Illinois Urbana-Champaign. I work in the Tissue Biomechanics Laboratory, where I use markerless motion capture and wearable sensors to investigate musculoskeletal loading and cardiopulmonary stimuli during wheelchair-based exercises in order to develop informed exercise recommendations for manual wheelchair users."
+  },
+  {
+    "objectID": "index.html#welcome-im-griffin-sipes.-im-a-fourth-year-phd-student-in-mechanical-engineering-at-the-university-of-illinois-urbana-champaign.-i-work-in-the-tissue-biomechanics-laboratory-where-i-use-markerless-motion-capture-and-wearable-sensors-to-investigate-pmusculoskeletal-loading-and-cardiopulmonary-stimuli-during-wheelchair-based-exercises-in-order-to-develop-informed-exercise-recommendations-for-manual-wheelchair-users.",
+    "href": "index.html#welcome-im-griffin-sipes.-im-a-fourth-year-phd-student-in-mechanical-engineering-at-the-university-of-illinois-urbana-champaign.-i-work-in-the-tissue-biomechanics-laboratory-where-i-use-markerless-motion-capture-and-wearable-sensors-to-investigate-pmusculoskeletal-loading-and-cardiopulmonary-stimuli-during-wheelchair-based-exercises-in-order-to-develop-informed-exercise-recommendations-for-manual-wheelchair-users.",
+    "title": "Griffin C. Sipes",
+    "section": "Welcome — I’m Griffin Sipes. I’m a fourth-year PhD student in mechanical engineering at the University of Illinois Urbana-Champaign. I work in the Tissue Biomechanics Laboratory, where I use markerless motion capture and wearable sensors to investigate pmusculoskeletal loading and cardiopulmonary stimuli during wheelchair-based exercises in order to develop informed exercise recommendations for manual wheelchair users.",
+    "text": "Welcome — I’m Griffin Sipes. I’m a fourth-year PhD student in mechanical engineering at the University of Illinois Urbana-Champaign. I work in the Tissue Biomechanics Laboratory, where I use markerless motion capture and wearable sensors to investigate pmusculoskeletal loading and cardiopulmonary stimuli during wheelchair-based exercises in order to develop informed exercise recommendations for manual wheelchair users."
+  },
+  {
+    "objectID": "index.html#welcome-im-griffin-sipes.-im-a-fourth-year-phd-student-in-mechanical-engineering-at-the-university-of-illinois-urbana-champaign.-i-work-in-the-tissue-biomechanics-laboratory-where-i-use-markerless-motion-capture-and-wearable-sensors-to-investigate-propulsion-biomechanics-and-musculoskeletal-loadingduring-wheelchair-based-exercises-in-order-to-develop-informed-exercise-recommendations-for-manual-wheelchair-users.",
+    "href": "index.html#welcome-im-griffin-sipes.-im-a-fourth-year-phd-student-in-mechanical-engineering-at-the-university-of-illinois-urbana-champaign.-i-work-in-the-tissue-biomechanics-laboratory-where-i-use-markerless-motion-capture-and-wearable-sensors-to-investigate-propulsion-biomechanics-and-musculoskeletal-loadingduring-wheelchair-based-exercises-in-order-to-develop-informed-exercise-recommendations-for-manual-wheelchair-users.",
+    "title": "Griffin C. Sipes",
+    "section": "Welcome — I’m Griffin Sipes. I’m a fourth-year PhD student in mechanical engineering at the University of Illinois Urbana-Champaign. I work in the Tissue Biomechanics Laboratory, where I use markerless motion capture and wearable sensors to investigate propulsion biomechanics and musculoskeletal loading=during wheelchair-based exercises in order to develop informed exercise recommendations for manual wheelchair users.",
+    "text": "Welcome — I’m Griffin Sipes. I’m a fourth-year PhD student in mechanical engineering at the University of Illinois Urbana-Champaign. I work in the Tissue Biomechanics Laboratory, where I use markerless motion capture and wearable sensors to investigate propulsion biomechanics and musculoskeletal loading=during wheelchair-based exercises in order to develop informed exercise recommendations for manual wheelchair users."
+  },
+  {
+    "objectID": "index.html#welcome-im-griffin-sipes.-im-a-fourth-year-phd-student-in-mechanical-engineering-at-the-university-of-illinois-urbana-champaign.-i-work-in-the-tissue-biomechanics-laboratory-where-i-use-we-to-investigate-propulsion-biomechanics-and-musculoskeletal-loading-during-wheelchair-based-exercises-in-order-to-develop-informed-exercise-recommendations-for-manual-wheelchair-users.",
+    "href": "index.html#welcome-im-griffin-sipes.-im-a-fourth-year-phd-student-in-mechanical-engineering-at-the-university-of-illinois-urbana-champaign.-i-work-in-the-tissue-biomechanics-laboratory-where-i-use-we-to-investigate-propulsion-biomechanics-and-musculoskeletal-loading-during-wheelchair-based-exercises-in-order-to-develop-informed-exercise-recommendations-for-manual-wheelchair-users.",
+    "title": "Griffin C. Sipes",
+    "section": "Welcome — I’m Griffin Sipes. I’m a fourth-year PhD student in mechanical engineering at the University of Illinois Urbana-Champaign. I work in the Tissue Biomechanics Laboratory, where I use we to investigate propulsion biomechanics and musculoskeletal loading during wheelchair-based exercises in order to develop informed exercise recommendations for manual wheelchair users.",
+    "text": "Welcome — I’m Griffin Sipes. I’m a fourth-year PhD student in mechanical engineering at the University of Illinois Urbana-Champaign. I work in the Tissue Biomechanics Laboratory, where I use we to investigate propulsion biomechanics and musculoskeletal loading during wheelchair-based exercises in order to develop informed exercise recommendations for manual wheelchair users."
+  },
+  {
+    "objectID": "index.html#welcome-im-griffin-sipes.-im-a-fourth-year-phd-student-in-mechanical-engineering-at-the-university-of-illinois-urbana-champaign.-i-work-in-the-tissue-biomechanics-laboratory-where-i-use-wearable-sensors-and-computer-vision-tec-to-investigate-propulsion-biomechanics-and-musculoskeletal-loading-during-wheelchair-based-exercises-in-order-to-develop-informed-exercise-recommendations-for-manual-wheelchair-users.",
+    "href": "index.html#welcome-im-griffin-sipes.-im-a-fourth-year-phd-student-in-mechanical-engineering-at-the-university-of-illinois-urbana-champaign.-i-work-in-the-tissue-biomechanics-laboratory-where-i-use-wearable-sensors-and-computer-vision-tec-to-investigate-propulsion-biomechanics-and-musculoskeletal-loading-during-wheelchair-based-exercises-in-order-to-develop-informed-exercise-recommendations-for-manual-wheelchair-users.",
+    "title": "Griffin C. Sipes",
+    "section": "Welcome — I’m Griffin Sipes. I’m a fourth-year PhD student in mechanical engineering at the University of Illinois Urbana-Champaign. I work in the Tissue Biomechanics Laboratory, where I use wearable sensors and computer vision tec to investigate propulsion biomechanics and musculoskeletal loading during wheelchair-based exercises in order to develop informed exercise recommendations for manual wheelchair users.",
+    "text": "Welcome — I’m Griffin Sipes. I’m a fourth-year PhD student in mechanical engineering at the University of Illinois Urbana-Champaign. I work in the Tissue Biomechanics Laboratory, where I use wearable sensors and computer vision tec to investigate propulsion biomechanics and musculoskeletal loading during wheelchair-based exercises in order to develop informed exercise recommendations for manual wheelchair users."
+  },
+  {
+    "objectID": "index.html#welcome-im-griffin-sipes.-im-a-fourth-year-phd-student-in-mechanical-engineering-at-the-university-of-illinois-urbana-champaign.",
+    "href": "index.html#welcome-im-griffin-sipes.-im-a-fourth-year-phd-student-in-mechanical-engineering-at-the-university-of-illinois-urbana-champaign.",
+    "title": "Griffin C. Sipes",
+    "section": "Welcome — I’m Griffin Sipes. I’m a fourth-year PhD student in Mechanical Engineering at the University of Illinois Urbana-Champaign.",
+    "text": "Welcome — I’m Griffin Sipes. I’m a fourth-year PhD student in Mechanical Engineering at the University of Illinois Urbana-Champaign."
   }
 ]

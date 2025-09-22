@@ -1,7 +1,37 @@
 ---
-title: "gsipes2.github.io"
+---
+title: "Griffin C. Sipes"
+description: "Portfolio — Griffin Sipes: image processing, computational imaging, and reproducible research."
+image: assets/hero.png
 ---
 
-This is a Quarto website.
+# Griffin C. Sipes
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+### Biomechanics · Adapted Exercise · Wearable Sensors · Computer Vision · Machine Learning
+
+Welcome — I'm Griffin Sipes. I'm a fourth-year PhD student in Mechanical Engineering at the University of Illinois Urbana-Champaign. 
+----
+
+## About
+
+I work in the Tissue Biomechanics Laboratory, where I investigate propulsion biomechanics and musculoskeletal loading during wheelchair-based exercises enabled by wearable sensors, machine learning, and computer vision techniques. One of my interests is building tools and tutorials to make biomechanics research more accessible by utilizing open-source workflows.
+
+## Featured Sections
+
+- **Tutorials** — Step-by-step guides and teaching materials.
+- **Projects** — Portfolio projects.
+
+## Quick Links
+
+- [About](about.qmd)
+- [Tutorials](tutorials.qmd)
+- [Projects](projects.qmd)
+
+## Contact
+
+If you'd like to get in touch, find me on
+
+[![Email](https://img.shields.io/badge/Email-griffin%40example.com-blue?style=flat-square&logo=Gmail&logoColor=white)](mailto:griffin@example.com)
+[![ORCID](https://img.shields.io/badge/ORCID-profile-green?style=flat-square&logo=orcid&logoColor=white)](https://orcid.org/YOUR-ORCID-ID)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME)
+[![GitHub](https://img.shields.io/badge/GitHub-@gsipes2-black?style=flat-square&logo=github&logoColor=white)](https://github.com/gsipes2)
