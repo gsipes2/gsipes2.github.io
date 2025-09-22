@@ -1,8 +1,6 @@
 ---
-title: Projects
+title: "Projects"
 format: html
 ---
-
-## Projects
 
 Coming Soon...

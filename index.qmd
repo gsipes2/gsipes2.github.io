@@ -3,7 +3,7 @@ title: "Welcome!"
 image: assets/hero.png
 ---
 
-I'm Griffin Sipes — a fourth-year PhD student in Mechanical Engineering at the University of Illinois Urbana-Champaign."
+I'm Griffin Sipes — a fourth-year PhD student in Mechanical Engineering at the University of Illinois Urbana-Champaign.
 
 ## About
 
