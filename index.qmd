@@ -1,15 +1,11 @@
 ---
----
 title: "Griffin C. Sipes"
-description: "Portfolio — Griffin Sipes: image processing, computational imaging, and reproducible research."
+description: "Portfolio — Griffin Sipes: Biomechanics · Adapted Exercise · Wearable Sensors · Computer Vision · Machine Learning"
 image: assets/hero.png
 ---
 
-# Griffin C. Sipes
-
-### Biomechanics · Adapted Exercise · Wearable Sensors · Computer Vision · Machine Learning
-
 Welcome — I'm Griffin Sipes. I'm a fourth-year PhD student in Mechanical Engineering at the University of Illinois Urbana-Champaign. 
+
 ----
 
 ## About
