@@ -19,17 +19,9 @@ jobs:
       - name: Run notebook index generator
         run: |
           python scripts/generate_notebook_pages.py
-      - name: Commit generated pages
+      - name: Skip committing generated pages (handled by central workflow)
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if [ -n "$(git status --porcelain)" ]; then
-            git add tutorials.qmd projects.qmd || true
-            git commit -m "Auto-generate tutorials/projects pages"
-            git push origin HEAD:main || echo "push failed"
-          else
-            echo "No changes to commit"
-          fi
+          echo "Generated tutorials/projects pages will not be committed by this workflow."
       - name: Setup Miniconda
         uses: conda-incubator/setup-miniconda@v2
         with:
@@ -46,14 +38,6 @@ jobs:
           mkdir -p _site/notebooks
           conda run -n env-quarto papermill notebooks/IntroductionImageProcessing.ipynb _site/notebooks/IntroductionImageProcessing.ipynb
           conda run -n env-quarto jupyter nbconvert --to html _site/notebooks/IntroductionImageProcessing.ipynb --output _site/notebooks/IntroductionImageProcessing.html
-      - name: Commit outputs
+      - name: Skip committing notebook outputs (handled by central workflow)
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if [ -n "$(git status --porcelain)" ]; then
-            git add _site/notebooks/IntroductionImageProcessing.html || true
-            git commit -m "Auto-run notebook outputs"
-            git push origin HEAD:main || echo "push failed"
-          else
-            echo "No changes to commit"
-          fi
+          echo "Notebook outputs will not be auto-committed by this workflow."

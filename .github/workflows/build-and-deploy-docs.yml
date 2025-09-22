@@ -1,0 +1,68 @@
+name: Build And Commit Site To Docs
+
+on:
+  push:
+    branches: [ main ]
+    # ignore commits created by this workflow to avoid loops
+    paths-ignore:
+      - 'docs/**'
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Miniconda
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+          auto-update-conda: true
+          python-version: 3.11
+
+      - name: Install Quarto CLI
+        run: |
+          set -euo pipefail
+          if command -v quarto >/dev/null 2>&1; then
+            echo "Quarto already installed: $(quarto --version)"
+            exit 0
+          fi
+          URL="https://github.com/quarto-dev/quarto-cli/releases/download/v1.8.24/quarto-1.8.24-linux-amd64.tar.gz"
+          for i in 1 2 3; do
+            curl -fsSL -o quarto.tar.gz "$URL" && break || (echo "download failed, retrying ($i)" && sleep 2)
+          done
+          mkdir -p "$RUNNER_TEMP/quarto-temp"
+          tar -xzf quarto.tar.gz -C "$RUNNER_TEMP/quarto-temp"
+          QUARTO_DIR=$(echo "$RUNNER_TEMP/quarto-temp"/* | awk '{print $1}')
+          echo "$QUARTO_DIR/bin" >> $GITHUB_PATH
+          "$QUARTO_DIR/bin/quarto" --version
+
+      - name: Render Quarto site
+        run: |
+          quarto render
+
+      - name: Sync _site to docs/
+        run: |
+          rm -rf docs || true
+          mkdir -p docs
+          cp -a _site/. docs/
+
+      - name: Commit and push docs/
+        env:
+          GIT_AUTHOR_NAME: github-actions[bot]
+          GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+        run: |
+          git config user.name "$GIT_AUTHOR_NAME"
+          git config user.email "$GIT_AUTHOR_EMAIL"
+          if [ -n "$(git status --porcelain docs)" ]; then
+            git add docs
+            git commit -m "chore(pages): deploy site to docs/ [ci skip]"
+            git push origin HEAD:main
+          else
+            echo "No changes to docs/ to commit"
+          fi

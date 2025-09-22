@@ -30,14 +30,6 @@ jobs:
           mkdir -p _site/notebooks
           papermill notebooks/IntroductionImageProcessing.ipynb _site/notebooks/IntroductionImageProcessing.ipynb
           jupyter nbconvert --to html _site/notebooks/IntroductionImageProcessing.ipynb --output _site/notebooks/IntroductionImageProcessing.html
-      - name: Commit outputs
+      - name: Skip committing outputs (now handled by central deploy workflow)
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if [ -n "$(git status --porcelain)" ]; then
-            git add _site/notebooks/IntroductionImageProcessing.html
-            git commit -m "Auto-run notebook outputs"
-            git push origin HEAD:main || echo "push failed"
-          else
-            echo "No changes to commit"
-          fi
+          echo "Notebook outputs will not be auto-committed by this workflow."
