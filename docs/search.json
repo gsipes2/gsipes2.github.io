@@ -7,6 +7,13 @@
     "text": "Interactive Introduction to Image Processing"
   },
   {
+    "objectID": "tutorials.html#tutorials",
+    "href": "tutorials.html#tutorials",
+    "title": "Tutorials",
+    "section": "",
+    "text": "Interactive Introduction to Image Processing"
+  },
+  {
     "objectID": "notebooks.html",
     "href": "notebooks.html",
     "title": "Notebooks",
@@ -18,39 +25,7 @@
     "href": "index.html",
     "title": "Welcome!",
     "section": "",
-<<<<<<< HEAD
-    "text": "I’m Griffin Sipes — a fourth-year PhD student in Mechanical Engineering at the University of Illinois Urbana-Champaign."
-  },
-  {
-    "objectID": "index.html#about",
-    "href": "index.html#about",
-    "title": "Welcome!",
-    "section": "About",
-    "text": "About\nI work in the Tissue Biomechanics Laboratory, where I investigate propulsion biomechanics and musculoskeletal loading during wheelchair-based exercises enabled by wearable sensors, machine learning, and computer vision techniques. One of my interests is building tools and tutorials to make biomechanics research more accessible by utilizing open-source workflows."
-  },
-  {
-    "objectID": "index.html#featured-sections",
-    "href": "index.html#featured-sections",
-    "title": "Welcome!",
-    "section": "Featured Sections",
-    "text": "Featured Sections\n\nTutorials — Step-by-step guides and teaching materials.\nProjects — Portfolio projects."
-  },
-  {
-    "objectID": "index.html#quick-links",
-    "href": "index.html#quick-links",
-    "title": "Welcome!",
-    "section": "Quick Links",
-    "text": "Quick Links\n\nAbout\nTutorials\nProjects"
-  },
-  {
-    "objectID": "index.html#contact",
-    "href": "index.html#contact",
-    "title": "Welcome!",
-    "section": "Contact",
-    "text": "Contact\nIf you’d like to get in touch, find me on"
-=======
     "text": "I work in the Tissue Biomechanics Laboratory, where I investigate propulsion biomechanics and musculoskeletal loading during wheelchair-based exercises enabled by wearable sensors, machine learning, and computer vision techniques. One of my interests is building tools and tutorials to make biomechanics research more accessible by utilizing open-source workflows."
->>>>>>> efc2d0f1377af323a1527a25999d83166abd65cb
   },
   {
     "objectID": "about.html",
@@ -106,9 +81,6 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-<<<<<<< HEAD
-    "text": "Coming Soon…"
-=======
     "text": "C"
   },
   {
@@ -187,6 +159,5 @@
     "title": "Griffin C. Sipes",
     "section": "Welcome — I’m Griffin Sipes. I’m a fourth-year PhD student in Mechanical Engineering at the University of Illinois Urbana-Champaign.",
     "text": "Welcome — I’m Griffin Sipes. I’m a fourth-year PhD student in Mechanical Engineering at the University of Illinois Urbana-Champaign."
->>>>>>> efc2d0f1377af323a1527a25999d83166abd65cb
   }
 ]
