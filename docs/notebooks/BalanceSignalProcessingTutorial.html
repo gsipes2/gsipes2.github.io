@@ -192,7 +192,7 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#force-plate-signal-processing-for-balance-analysis-a-practical-tutorial" id="toc-force-plate-signal-processing-for-balance-analysis-a-practical-tutorial" class="nav-link active" data-scroll-target="#force-plate-signal-processing-for-balance-analysis-a-practical-tutorial">Force-plate signal processing for balance analysis — a practical tutorial</a>
+  <li><a href="#signal-processing-for-biomechanics-force-plate-balance-analysis-tutorial" id="toc-signal-processing-for-biomechanics-force-plate-balance-analysis-tutorial" class="nav-link active" data-scroll-target="#signal-processing-for-biomechanics-force-plate-balance-analysis-tutorial">Signal Processing for Biomechanics: Force-Plate Balance Analysis Tutorial</a>
   <ul class="collapse">
   <li><a href="#environment-setup-what-this-cell-does-and-why-it-matters" id="toc-environment-setup-what-this-cell-does-and-why-it-matters" class="nav-link" data-scroll-target="#environment-setup-what-this-cell-does-and-why-it-matters">Environment setup — what this cell does and why it matters</a></li>
   <li><a href="#download-load-eoec-data-what-this-cell-does" id="toc-download-load-eoec-data-what-this-cell-does" class="nav-link" data-scroll-target="#download-load-eoec-data-what-this-cell-does">Download &amp; load EO/EC data (what this cell does)</a></li>
@@ -228,8 +228,8 @@ window.Quarto = {
 <figcaption>Open in Colab</figcaption>
 </figure>
 </div>
-<section id="force-plate-signal-processing-for-balance-analysis-a-practical-tutorial" class="level1">
-<h1>Force-plate signal processing for balance analysis — a practical tutorial</h1>
+<section id="signal-processing-for-biomechanics-force-plate-balance-analysis-tutorial" class="level1">
+<h1>Signal Processing for Biomechanics: Force-Plate Balance Analysis Tutorial</h1>
 <p>This notebook teaches the fundamentals of signal processing using a common biomechanics example: force‑plate data for postural/balance analysis. It is intended to give hands‑on experience with signal processing by converting raw force‑plate voltages into meaningful balance metrics (e.g., CoP stabilograms, excursion ranges, CoP speed).</p>
 <p>Prerequisites - Basic Python experience (pandas, numpy, matplotlib). - Familiarity with time series concepts (sampling rate, basic plotting) is helpful but not required — the notebook introduces essential signal‑processing ideas as we go.</p>
 <p>Learning objectives - Load and inspect force‑plate time series (voltages). - Convert voltages to forces/moments using a calibration matrix and amplifier settings. - Use power spectral density (PSD) to choose data‑driven low‑pass filter cutoffs (cumulative power). - Apply zero‑phase Butterworth filtering. - Compute Center of Pressure (CoP), visualize stabilograms, and calculate scalar sway metrics (AP/ML range, mean CoP speed, excursion statistics).</p>
@@ -315,7 +315,7 @@ window.Quarto = {
 </ul>
 <p>Notes / things to check or change if using your own data - Replace EO_URL / EC_URL with your direct file links (Box direct‑download or other static URLs). - Adjust <code>skiprows</code>, <code>delimiter</code>, and <code>names</code> to match your file format if headers or metadata differ.</p>
 <p>After running, inspect: - <code>df_EO.head()</code>, <code>df_EC.head()</code> for column alignment, - <code>df_EO.info()</code>, <code>df_EC.info()</code> for dtypes and NaNs, - how many NaNs were created; decide to interpolate, fill, or drop before spectral/filters. - Files are saved under <code>/content/</code> (Colab); change paths for a different environment.</p>
-<div id="81749b9c" class="cell">
+<div id="81749b9c" class="cell" data-execution_count="63">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>EO_URL <span class="op">=</span> <span class="st">'https://uofi.box.com/shared/static/elqg597eogilxkqc94kg1wjwfjzwtyzy.txt'</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>EC_URL <span class="op">=</span> <span class="st">'https://uofi.box.com/shared/static/0a1pbfhmtxadpstrw8cdd07ziz26tar2.txt'</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1056,7 +1056,7 @@ Example: if fs = 1000 Hz, Nyquist = 500 Hz. - Why it matters: the Nyquist freque
 <h3 class="anchored" data-anchor-id="interactive-slider-how-to-use-and-what-to-observe">Interactive slider — how to use and what to observe</h3>
 <p>This widget allows you to pick a manual cutoff frequency and immediately see its impact on the filtered voltage signals.</p>
 <p>Learning points: - Observe how the traces become smoother as cutoff decreases and how details are lost when the cutoff is set too low. - Note the update time: filtering multiple channels may take a few seconds after moving the slider. - Use this tool to develop an intuition for a reasonable range of cutoff frequencies before using data-driven spectral methods.</p>
-<div id="55fe7765" class="cell">
+<div id="55fe7765" class="cell" data-execution_count="78">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the slider to see how using different cutoff frequencies effects the signal</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>cutoff_freq <span class="op">=</span> ipywidgets.widgets.FloatSlider(value<span class="op">=</span><span class="dv">25</span>, <span class="bu">min</span><span class="op">=</span><span class="fl">0.1</span>, <span class="bu">max</span><span class="op">=</span><span class="fl">49.9</span>, step<span class="op">=</span><span class="fl">0.1</span>, description<span class="op">=</span><span class="st">'Cutoff Frequency (Hz):'</span>)</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
