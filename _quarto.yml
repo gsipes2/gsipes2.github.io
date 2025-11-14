@@ -10,10 +10,11 @@ website:
         text: Home
       - href: about.qmd
         text: About
-      - href: tutorials.qmd
-        text: Tutorials
       - href: projects.qmd
         text: Projects
+      - href: tutorials.qmd
+        text: Tutorials
+      # NOTE: The order of items here defines the navbar order. Projects appears before Tutorials.
 
 format:
   html:

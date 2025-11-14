@@ -2,4 +2,34 @@
 title: "About"
 ---
 
-I work in the Tissue Biomechanics Laboratory, where I investigate propulsion biomechanics and musculoskeletal loading during wheelchair-based exercises enabled by wearable sensors, machine learning, and computer vision techniques. One of my interests is building tools and tutorials to make biomechanics research more accessible by utilizing open-source workflows.
+<!-- I work in the Tissue Biomechanics Laboratory, where I investigate propulsion biomechanics and musculoskeletal loading during wheelchair-based exercises enabled by wearable sensors, machine learning, and computer vision techniques. One of my interests is building tools and tutorials to make biomechanics research more accessible by utilizing open-source workflows. -->
+
+I'm a 4th year PhD student in Mechanical Engineering at the University of Illinois Urbana-Champaign, where I conduct research in the Tissue Biomechanics Laboratory. My work has two complementary focuses: **developing accessible measurement tools** and **applying them to evaluate exercise interventions** for manual wheelchair users.
+
+## Research Focus
+
+I develop and apply accessible technologies to solve real-world problems in wheelchair mobility:
+
+- **Evaluating adapted exercise modes** like handcycling and suspended-wheel wheelchair attachments
+- **Quantifying musculoskeletal safety** during exercise to balance cardiovascular benefits with injury risk
+- **Developing monitoring tools** that enable personalized exercise prescription and long-term safety tracking
+
+## What I Develop
+
+I build **open-source, low-cost systems** to support this research:
+
+- **Machine learning algorithms** that predict external loading during physical activity
+- **Flexible markerless motion capture pipelines** with multi-camera calibration, pose estimation, and 3D triangulation
+
+## What I Use
+
+I leverage existing tools and technologies to conduct my research:
+
+- **Machine Learning:** PyTorch, TensorFlow, scikit-learn for model development
+- **Computer Vision:** OpenCV, DeepLabCut for pose estimation, camera calibration, and 3-D reconstruction
+- **Biomechanics Analysis:** OpenSim for musculoskeletal modeling and simulation
+- **Wearable Sensors:** Smartwatches and IMUs for field-based data collection
+
+## My Approach
+
+My work focuses on creating **practical measurement tools** that bring biomechanics monitoring out of the lab and into real-world settings. By developing accessible systems to study exercise safety and effectiveness, I aim to **support the development** of better physical activity guidance for manual wheelchair users and the clinicians who work with them.

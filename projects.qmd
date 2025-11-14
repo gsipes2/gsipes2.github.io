@@ -3,54 +3,83 @@ title: "Projects"
 format: html
 ---
 
-### Kinematics-Based Load Prediction in Handcycling
+---
 
-**Keywords:** `Machine Learning` `Biomechanics` `Python` `PyTorch` `Sensors`
+## Evaluation of Adapted Exercise Modes
+<!-- **Keywords:** `Musculoskeletal Modeling` `OpenSim` `Wearable Sensors` `Community-Based Research` -->
+- Conducting community-based evaluations of adapted exercise modes using wearable sensors and musculoskeletal modeling to assess musculoskeletal safety and participant enjoyment.
+- Data collection combines graded exercise testing on a custom wheelchair ergometer (following ACSM protocols) with personalized workouts performed in community settings.
+- The study recruits participants across a broad age range and varied activity backgrounds (athletic and non‑athletic) to improve generalizability.
+- Primary outcomes include shoulder loading and propulsion metrics derived from musculoskeletal modeling and sensor data, alongside self-reported enjoyment to compare exercise modes.
 
-This project developed machine learning models to estimate external loads during handcycle propulsion using only kinematic data. By leveraging arm segment accelerations, this work provides a method to monitor training loads and understand propulsion mechanics outside of a laboratory setting, without the need for force-instrumented equipment.
-
-*   **Primary Publication:** *Sipes G, Lee M, Halloran K, Rice I, Kersh M. Kinematics-based predictions of external loads during handcycling. Sensors, 2024 (Invited).*
-*   **Related Presentation:** *Estimating hand reaction forces from arm segment accelerations during handcycle propulsion using machine learning.* (International Society of Biomechanics Congress, 2023)
+* **Presentation:** *Evaluation of propulsion biomechanics during exercise with a suspended-wheel everyday wheelchair* (American Society of Biomechanics Annual Meeting, 2024)
 
 ---
 
-### Smartwatch-Based Wheelchair Propulsion Analysis
+## Smartwatch-Based Wheelchair Propulsion Monitoring
+<!-- **Keywords:** `Machine Learning` `Wearable Sensors` `Smartwatch` -->
+Developing a novel method to predict manual wheelchair propulsion kinetics using only smartwatch sensor data. This work addresses the limitations of gold-standard devices (e.g., the SMARTWheel), which are no longer widely available and are restricted to laboratory use. The system aims to predict all six components of hand reaction loads (three forces and three moments) and to enable calculation of common wheelchair propulsion metrics. This pilot study is evaluating whether consumer-grade wearables can provide accurate, field-deployable measures of biomechanical loading to support injury prevention and rehabilitation for manual wheelchair users.
 
-**Keywords:** `Wearable Sensors` `Machine Learning` `Accessibility` `Python` `Biomechanics`
+* **Presentation:** *Predicting manual wheelchair propulsion kinetics using smartwatch data: a pilot study* (MRC Annual Symposium, Washington University in St. Louis, 2025)
 
-A pilot study to create an accessible tool for quantifying manual wheelchair propulsion. This project involves predicting critical kinetic metrics (forces and moments) directly from smartwatch sensor data. The goal is to develop a low-cost, user-friendly method for long-term monitoring of propulsion biomechanics to help reduce the risk of upper limb injuries.
-
-*   **Primary Presentation:** *Predicting manual wheelchair propulsion kinetics using smartwatch data: a pilot study.* (MRC Annual Symposium, Washington University in St. Louis, 2025)
-*   **Related Presentation:** *Evaluation of propulsion biomechanics during exercise with a suspended-wheel everyday wheelchair.* (American Society of Biomechanics Annual Meeting, 2024)
-
----
-
-### Statistical Estimation of Equine Ground Reaction Forces
-
-**Keywords:** `Machine Learning` `Gait Analysis` `Scikit-learn` `Equine Biomechanics`
-
-Focused on developing non-invasive methods for biomechanical analysis in veterinary medicine. This project created and compared statistical and machine learning models to predict ground reaction forces on the forelimbs of walking and trotting foals, using kinematic and anthropometric data as inputs.
-
-*   **Primary Publication:** *Opolz M, Sipes G, Moshage S, McCoy A, Kersh M. Statistical approaches for estimating forelimb ground reaction forces in foals during walking and trotting. Journal of Biomechanics, 2025 (Submitted).*
-*   **Related Presentation:** *The effect of exercise on fetlock joint moments during walking and trotting.* (International Society of Biomechanics Congress, 2025)
+<!-- * **Innovation:** First system to enable field-based monitoring of wheelchair propulsion biomechanics using consumer wearable technology
+* **Impact:** Enables long-term monitoring of musculoskeletal safety during exercise interventions for wheelchair users
+* **Technical Stack:** Python, TensorFlow, inertial motion capture, OpenSim musculoskeletal modeling -->
 
 ---
 
-### Finite Element Analysis of Equine Bone Fracture Risk
+## Handcycling Force Prediction from Wearable Sensors
+<!-- **Keywords:** `Machine Learning` `Temporal Convolutional Networks` `Biomechanics` `Rehabilitation Engineering` -->
+Investigated the feasibility of predicting continuous hand reaction forces during handcycling using only arm segment kinematics. This work compared multiple machine learning architectures including temporal convolutional networks (TCN), residual networks, and ensemble methods against traditional statistical approaches. The TCN model achieved correlation coefficients up to r=0.97 for in-plane forces, enabling replacement of instrumented crank handles in future studies.
 
-**Keywords:** `Finite Element Analysis` `Abaqus` `ImageJ` `Biomechanics` `Bone Mechanics`
+* **Publication:** *Kinematics-Based Predictions of External Loads during Handcycling* (Sensors, 2024)
 
-This research used subject-specific finite element modeling to investigate bone quality and stress distribution in the equine third metacarpal. By analyzing micro-CT data and creating detailed models, the project identified and characterized the mechanical factors that make specific regions more prone to fracture during high-speed locomotion.
+* **Presentation:** *Estimating hand reaction forces from arm segment accelerations during handcycle propulsion using machine learning* (Congress of the International Society of Biomechanics, 2023)
 
-*   **Primary Presentation:** *Bone quality differences in fracture-prone regions of the equine third metacarpal.* (Orthopaedic Research Society, 2021)
-*   **Related Presentation:** *Development of a density-modulus relationship for juvenile equine bone.* (Orthopaedic Research Society, 2021)
+<!-- * **Technical Achievement:** Demonstrated that machine learning models can leverage temporal dependencies in kinematic data to accurately predict kinetics -->
+<!-- * **Applications:** Enables power monitoring and musculoskeletal safety assessment during handcycling exercise outside laboratory settings -->
 
 ---
 
-### Accessible Markerless Motion Capture Pipeline
+## Flexible Multi-Camera Markerless Motion Capture Pipeline
+<!-- **Keywords:** `Computer Vision` `DeepLabCut` `OpenCV` `Photogrammetry` `Multi-view Geometry` `Python` -->
+Developing a scalable motion capture system that works with any N≥2 consumer cameras to achieve research-grade 3D motion tracking. The complete pipeline includes:
 
-**Keywords:** `Computer Vision` `DeepLabCut` `Open-Source` `Python` `Photogrammetry`
+- **Camera Calibration:** Estimating intrinsic parameters for each camera using Zhang's method with planar calibration targets
+- **Lens Distortion Correction:** Applying radial and tangential distortion models to correct image artifacts
+- **Camera Pose Estimation:** Solving the Perspective-n-Point (PnP) problem to determine extrinsic camera parameters
+- **Keypoint Tracking:** Using deep learning-based keypoint detection (DeepLabCut) to track anatomical landmarks across multiple views
+- **3D Reconstruction:** Triangulating 2D keypoints into accurate 3D coordinates using multi-view geometric constraints
 
-Engineered a low-cost, accessible motion capture system using two consumer-grade cameras and open-source software. This work demonstrates that accurate 3D motion data can be obtained without expensive, specialized equipment, lowering the barrier to entry for biomechanical analysis in clinical, athletic, and research settings.
+<!-- * **Technical Innovation:** Flexible pipeline that adapts to any camera configuration while maintaining high accuracy
+* **Accessibility:** Eliminates dependency on expensive specialized equipment using consumer cameras and open-source software
+* **Applications:** Biomechanics research, clinical movement analysis, sports performance tracking -->
 
-*   **Primary Presentation:** *Affordable and versatile markerless motion capture using two cameras and open-source software.* (University of Illinois Undergraduate Research Symposium, 2024)
+
+<!-- ### Accessible Wheelchair Propulsion Monitoring from Smartwatch Data
+**Keywords:** `Machine Learning` `Wearable Sensors` `Python` `Accessibility` `Biomechanics`
+- Predicted wheelchair propulsion kinetics from smartwatch data to create an accessible tool for quantifying propulsion.
+- This pilot study explores using consumer-grade wearable sensors to monitor biomechanical loads outside the lab, aiming to help reduce the risk of upper limb injuries in manual wheelchair users. -->
+
+<!-- ### Low-Cost, Markerless Motion Capture Pipeline
+**Keywords:** `Computer Vision` `DeepLabCut` `OpenCV` `Photogrammetry` `Open-Source`
+- Developed an accessible markerless motion capture pipeline using low-cost cameras and open-source tools for photogrammetry and deep learning-based pose estimation.
+- This system makes biomechanical analysis more accessible by eliminating the need for expensive, specialized motion capture equipment. -->
+
+---
+
+## Machine Learning for Equine Ground Reaction Force Estimation
+<!-- **Keywords:** `Machine Learning` `Python` `Scikit-learn` `Equine Biomechanics` `Gait Analysis` -->
+- Estimated equine ground reaction forces using kinematic and anthropometric data with machine learning models.
+- Developed statistical approaches to predict loading during walking and trotting, providing non-invasive methods for veterinary biomechanical assessment.
+
+- **Publication:** *Statistical approaches for estimating forelimb ground reaction forces in foals during walking and trotting* (Journal of Biomechanics, 2025 — Submitted)
+
+---
+
+## Finite Element Analysis of Equine Bone Fracture Risk
+<!-- **Keywords:** `Finite Element Analysis` `Abaqus` `ImageJ` `Biomechanics` `Bone Mechanics` -->
+- Analyzed high fracture risk regions of equine bone using subject-specific finite element models.
+- Created detailed models from CT data to understand stress distribution in fracture-prone areas of the third metacarpal.
+
+- **Presentation:** *Bone quality differences in fracture-prone regions of the equine third metacarpal* (Orthopaedic Research Society, 2021)

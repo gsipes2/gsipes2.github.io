@@ -1,11 +1,7 @@
 name: Build And Commit Site To Docs
 
 on:
-  push:
-    branches: [ main ]
-    # ignore commits created by this workflow to avoid loops
-    paths-ignore:
-      - 'docs/**'
+  workflow_dispatch:
 
 permissions:
   contents: write

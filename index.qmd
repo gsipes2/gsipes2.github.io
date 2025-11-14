@@ -13,14 +13,14 @@ I'm Griffin Sipes — a fourth-year PhD student in Mechanical Engineering at the
 ## Quick Links
 
 - [About](about.qmd)
-- [Tutorials](tutorials.qmd)
 - [Projects](projects.qmd)
+- [Tutorials](tutorials.qmd)
 
 ## Contact
 
 If you'd like to get in touch, find me on
 
-[![Email](https://img.shields.io/badge/Email-griffin%40example.com-blue?style=flat-square&logo=Gmail&logoColor=white)](mailto:gsipes2@illinois.edu)
+[![Email](https://img.shields.io/badge/Email-gsipes2%40illinois.edu-blue?style=flat-square&logo=Gmail&logoColor=white)](mailto:gsipes2@illinois.edu)
 [![ORCID](https://img.shields.io/badge/ORCID-profile-green?style=flat-square&logo=orcid&logoColor=white)](https://orcid.org/0000-0002-5839-7974)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gsipes/)
 <!-- [![GitHub](https://img.shields.io/badge/GitHub-@gsipes2-black?style=flat-square&logo=github&logoColor=white)](https://github.com/gsipes2) -->
