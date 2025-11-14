@@ -3,7 +3,5 @@ title: Tutorials
 format: html
 ---
 
-## Tutorials
-
 - [Force-plate signal processing for balance analysis — a practical tutorial](notebooks/BalanceSignalProcessingTutorial.ipynb)
 - [Interactive Introduction to Image Processing](notebooks/IntroductionImageProcessing.ipynb)

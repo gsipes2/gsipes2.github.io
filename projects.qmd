@@ -3,6 +3,4 @@ title: Projects
 format: html
 ---
 
-## Projects
-
 No projects found.

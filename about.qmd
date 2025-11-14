@@ -2,6 +2,4 @@
 title: "About"
 ---
 
-## About
-
 I work in the Tissue Biomechanics Laboratory, where I investigate propulsion biomechanics and musculoskeletal loading during wheelchair-based exercises enabled by wearable sensors, machine learning, and computer vision techniques. One of my interests is building tools and tutorials to make biomechanics research more accessible by utilizing open-source workflows.
