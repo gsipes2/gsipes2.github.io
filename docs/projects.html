@@ -124,11 +124,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#kinematics-based-load-prediction-in-handcycling" id="toc-kinematics-based-load-prediction-in-handcycling" class="nav-link active" data-scroll-target="#kinematics-based-load-prediction-in-handcycling">Kinematics-Based Load Prediction in Handcycling</a></li>
-  <li><a href="#smartwatch-based-wheelchair-propulsion-analysis" id="toc-smartwatch-based-wheelchair-propulsion-analysis" class="nav-link" data-scroll-target="#smartwatch-based-wheelchair-propulsion-analysis">Smartwatch-Based Wheelchair Propulsion Analysis</a></li>
-  <li><a href="#statistical-estimation-of-equine-ground-reaction-forces" id="toc-statistical-estimation-of-equine-ground-reaction-forces" class="nav-link" data-scroll-target="#statistical-estimation-of-equine-ground-reaction-forces">Statistical Estimation of Equine Ground Reaction Forces</a></li>
+  <li><a href="#evaluation-of-adapted-exercise-modes" id="toc-evaluation-of-adapted-exercise-modes" class="nav-link active" data-scroll-target="#evaluation-of-adapted-exercise-modes">Evaluation of Adapted Exercise Modes</a></li>
+  <li><a href="#smartwatch-based-wheelchair-propulsion-monitoring" id="toc-smartwatch-based-wheelchair-propulsion-monitoring" class="nav-link" data-scroll-target="#smartwatch-based-wheelchair-propulsion-monitoring">Smartwatch-Based Wheelchair Propulsion Monitoring</a></li>
+  <li><a href="#handcycling-force-prediction-from-wearable-sensors" id="toc-handcycling-force-prediction-from-wearable-sensors" class="nav-link" data-scroll-target="#handcycling-force-prediction-from-wearable-sensors">Handcycling Force Prediction from Wearable Sensors</a></li>
+  <li><a href="#flexible-multi-camera-markerless-motion-capture-pipeline" id="toc-flexible-multi-camera-markerless-motion-capture-pipeline" class="nav-link" data-scroll-target="#flexible-multi-camera-markerless-motion-capture-pipeline">Flexible Multi-Camera Markerless Motion Capture Pipeline</a></li>
+  <li><a href="#machine-learning-for-equine-ground-reaction-force-estimation" id="toc-machine-learning-for-equine-ground-reaction-force-estimation" class="nav-link" data-scroll-target="#machine-learning-for-equine-ground-reaction-force-estimation">Machine Learning for Equine Ground Reaction Force Estimation</a></li>
   <li><a href="#finite-element-analysis-of-equine-bone-fracture-risk" id="toc-finite-element-analysis-of-equine-bone-fracture-risk" class="nav-link" data-scroll-target="#finite-element-analysis-of-equine-bone-fracture-risk">Finite Element Analysis of Equine Bone Fracture Risk</a></li>
-  <li><a href="#accessible-markerless-motion-capture-pipeline" id="toc-accessible-markerless-motion-capture-pipeline" class="nav-link" data-scroll-target="#accessible-markerless-motion-capture-pipeline">Accessible Markerless Motion Capture Pipeline</a></li>
   </ul>
 </nav>
     </div>
@@ -154,52 +155,79 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="kinematics-based-load-prediction-in-handcycling" class="level3">
-<h3 class="anchored" data-anchor-id="kinematics-based-load-prediction-in-handcycling">Kinematics-Based Load Prediction in Handcycling</h3>
-<p><strong>Keywords:</strong> <code>Machine Learning</code> <code>Biomechanics</code> <code>Python</code> <code>PyTorch</code> <code>Sensors</code></p>
-<p>This project developed machine learning models to estimate external loads during handcycle propulsion using only kinematic data. By leveraging arm segment accelerations, this work provides a method to monitor training loads and understand propulsion mechanics outside of a laboratory setting, without the need for force-instrumented equipment.</p>
+<section id="evaluation-of-adapted-exercise-modes" class="level1">
+<h1>Evaluation of Adapted Exercise Modes</h1>
+<!-- **Keywords:** `Musculoskeletal Modeling` `OpenSim` `Wearable Sensors` `Community-Based Research` -->
 <ul>
-<li><strong>Primary Publication:</strong> <em>Sipes G, Lee M, Halloran K, Rice I, Kersh M. Kinematics-based predictions of external loads during handcycling. Sensors, 2024 (Invited).</em></li>
-<li><strong>Related Presentation:</strong> <em>Estimating hand reaction forces from arm segment accelerations during handcycle propulsion using machine learning.</em> (International Society of Biomechanics Congress, 2023)</li>
+<li><p>Conducting community-based evaluations of adapted exercise modes using wearable sensors and musculoskeletal modeling to assess musculoskeletal safety and participant enjoyment.</p></li>
+<li><p>Data collection combines graded exercise testing on a custom wheelchair ergometer (following ACSM protocols) with personalized workouts performed in community settings.</p></li>
+<li><p>The study recruits participants across a broad age range and varied activity backgrounds (athletic and non‑athletic) to improve generalizability.</p></li>
+<li><p>Primary outcomes include shoulder loading and propulsion metrics derived from musculoskeletal modeling and sensor data, alongside self-reported enjoyment to compare exercise modes.</p></li>
+<li><p><strong>Presentation:</strong> <em>Evaluation of propulsion biomechanics during exercise with a suspended-wheel everyday wheelchair</em> (American Society of Biomechanics Annual Meeting, 2024)</p></li>
 </ul>
 <hr>
 </section>
-<section id="smartwatch-based-wheelchair-propulsion-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="smartwatch-based-wheelchair-propulsion-analysis">Smartwatch-Based Wheelchair Propulsion Analysis</h3>
-<p><strong>Keywords:</strong> <code>Wearable Sensors</code> <code>Machine Learning</code> <code>Accessibility</code> <code>Python</code> <code>Biomechanics</code></p>
-<p>A pilot study to create an accessible tool for quantifying manual wheelchair propulsion. This project involves predicting critical kinetic metrics (forces and moments) directly from smartwatch sensor data. The goal is to develop a low-cost, user-friendly method for long-term monitoring of propulsion biomechanics to help reduce the risk of upper limb injuries.</p>
+<section id="smartwatch-based-wheelchair-propulsion-monitoring" class="level1">
+<h1>Smartwatch-Based Wheelchair Propulsion Monitoring</h1>
+<!-- **Keywords:** `Machine Learning` `Wearable Sensors` `Smartwatch` -->
+<p>Developing a novel method to predict manual wheelchair propulsion kinetics using only smartwatch sensor data. This work addresses the limitations of gold-standard devices (e.g., the SMARTWheel), which are no longer widely available and are restricted to laboratory use. The system aims to predict all six components of hand reaction loads (three forces and three moments) and to enable calculation of common wheelchair propulsion metrics. This pilot study is evaluating whether consumer-grade wearables can provide accurate, field-deployable measures of biomechanical loading to support injury prevention and rehabilitation for manual wheelchair users.</p>
 <ul>
-<li><strong>Primary Presentation:</strong> <em>Predicting manual wheelchair propulsion kinetics using smartwatch data: a pilot study.</em> (MRC Annual Symposium, Washington University in St.&nbsp;Louis, 2025)</li>
-<li><strong>Related Presentation:</strong> <em>Evaluation of propulsion biomechanics during exercise with a suspended-wheel everyday wheelchair.</em> (American Society of Biomechanics Annual Meeting, 2024)</li>
+<li><strong>Presentation:</strong> <em>Sipes G, Rice I, Kersh M. </em>Predicting manual wheelchair propulsion kinetics using smartwatch data: a pilot study* (MRC Annual Symposium, Washington University in St.&nbsp;Louis, 2025)</li>
+</ul>
+<!-- * **Innovation:** First system to enable field-based monitoring of wheelchair propulsion biomechanics using consumer wearable technology
+* **Impact:** Enables long-term monitoring of musculoskeletal safety during exercise interventions for wheelchair users
+* **Technical Stack:** Python, TensorFlow, inertial motion capture, OpenSim musculoskeletal modeling -->
+<hr>
+</section>
+<section id="handcycling-force-prediction-from-wearable-sensors" class="level1">
+<h1>Handcycling Force Prediction from Wearable Sensors</h1>
+<!-- **Keywords:** `Machine Learning` `Temporal Convolutional Networks` `Biomechanics` `Rehabilitation Engineering` -->
+<p>Investigated the feasibility of predicting continuous hand reaction forces during handcycling using only arm segment kinematics. This work compared multiple machine learning architectures including temporal convolutional networks (TCN), residual networks, and ensemble methods against traditional statistical approaches. The TCN model achieved correlation coefficients up to r=0.97 for in-plane forces, enabling replacement of instrumented crank handles in future studies.</p>
+<ul>
+<li><p><strong>Publication:</strong> <em>Kinematics-Based Predictions of External Loads during Handcycling</em> (Sensors, 2024)</p></li>
+<li><p><strong>Presentation:</strong> <em>Estimating hand reaction forces from arm segment accelerations during handcycle propulsion using machine learning</em> (Congress of the International Society of Biomechanics, 2023)</p></li>
+</ul>
+<!-- * **Technical Achievement:** Demonstrated that machine learning models can leverage temporal dependencies in kinematic data to accurately predict kinetics -->
+<!-- * **Applications:** Enables power monitoring and musculoskeletal safety assessment during handcycling exercise outside laboratory settings -->
+<hr>
+</section>
+<section id="flexible-multi-camera-markerless-motion-capture-pipeline" class="level1">
+<h1>Flexible Multi-Camera Markerless Motion Capture Pipeline</h1>
+<!-- **Keywords:** `Computer Vision` `DeepLabCut` `OpenCV` `Photogrammetry` `Multi-view Geometry` `Python` -->
+<p>Developing a scalable motion capture system that works with any N≥2 consumer cameras to achieve research-grade 3D motion tracking. The complete pipeline includes:</p>
+<ul>
+<li><strong>Camera Calibration:</strong> Estimating intrinsic parameters for each camera using Zhang’s method with planar calibration targets</li>
+<li><strong>Lens Distortion Correction:</strong> Applying radial and tangential distortion models to correct image artifacts</li>
+<li><strong>Camera Pose Estimation:</strong> Solving the Perspective-n-Point (PnP) problem to determine extrinsic camera parameters</li>
+<li><strong>Keypoint Tracking:</strong> Using deep learning-based keypoint detection (DeepLabCut) to track anatomical landmarks across multiple views</li>
+<li><strong>3D Reconstruction:</strong> Triangulating 2D keypoints into accurate 3D coordinates using multi-view geometric constraints</li>
+</ul>
+<!-- * **Technical Innovation:** Flexible pipeline that adapts to any camera configuration while maintaining high accuracy
+* **Accessibility:** Eliminates dependency on expensive specialized equipment using consumer cameras and open-source software
+* **Applications:** Biomechanics research, clinical movement analysis, sports performance tracking -->
+<!-- ### Accessible Wheelchair Propulsion Monitoring from Smartwatch Data
+**Keywords:** `Machine Learning` `Wearable Sensors` `Python` `Accessibility` `Biomechanics`
+- Predicted wheelchair propulsion kinetics from smartwatch data to create an accessible tool for quantifying propulsion.
+- This pilot study explores using consumer-grade wearable sensors to monitor biomechanical loads outside the lab, aiming to help reduce the risk of upper limb injuries in manual wheelchair users. -->
+<!-- ### Low-Cost, Markerless Motion Capture Pipeline
+**Keywords:** `Computer Vision` `DeepLabCut` `OpenCV` `Photogrammetry` `Open-Source`
+- Developed an accessible markerless motion capture pipeline using low-cost cameras and open-source tools for photogrammetry and deep learning-based pose estimation.
+- This system makes biomechanical analysis more accessible by eliminating the need for expensive, specialized motion capture equipment. -->
+<hr>
+</section>
+<section id="machine-learning-for-equine-ground-reaction-force-estimation" class="level1">
+<h1>Machine Learning for Equine Ground Reaction Force Estimation</h1>
+<p><strong>Keywords:</strong> <code>Machine Learning</code> <code>Python</code> <code>Scikit-learn</code> <code>Equine Biomechanics</code> <code>Gait Analysis</code> - Estimated equine ground reaction forces using kinematic and anthropometric data with machine learning models. - Developed statistical approaches to predict loading during walking and trotting, providing non-invasive methods for veterinary biomechanical assessment.</p>
+<ul>
+<li><strong>Publication:</strong> <em>Statistical approaches for estimating forelimb ground reaction forces in foals during walking and trotting</em> (Journal of Biomechanics, 2025 — Submitted)</li>
 </ul>
 <hr>
 </section>
-<section id="statistical-estimation-of-equine-ground-reaction-forces" class="level3">
-<h3 class="anchored" data-anchor-id="statistical-estimation-of-equine-ground-reaction-forces">Statistical Estimation of Equine Ground Reaction Forces</h3>
-<p><strong>Keywords:</strong> <code>Machine Learning</code> <code>Gait Analysis</code> <code>Scikit-learn</code> <code>Equine Biomechanics</code></p>
-<p>Focused on developing non-invasive methods for biomechanical analysis in veterinary medicine. This project created and compared statistical and machine learning models to predict ground reaction forces on the forelimbs of walking and trotting foals, using kinematic and anthropometric data as inputs.</p>
+<section id="finite-element-analysis-of-equine-bone-fracture-risk" class="level1">
+<h1>Finite Element Analysis of Equine Bone Fracture Risk</h1>
+<p><strong>Keywords:</strong> <code>Finite Element Analysis</code> <code>Abaqus</code> <code>ImageJ</code> <code>Biomechanics</code> <code>Bone Mechanics</code> - Analyzed high fracture risk regions of equine bone using subject-specific finite element models. - Created detailed models from CT data to understand stress distribution in fracture-prone areas of the third metacarpal.</p>
 <ul>
-<li><strong>Primary Publication:</strong> <em>Opolz M, Sipes G, Moshage S, McCoy A, Kersh M. Statistical approaches for estimating forelimb ground reaction forces in foals during walking and trotting. Journal of Biomechanics, 2025 (Submitted).</em></li>
-<li><strong>Related Presentation:</strong> <em>The effect of exercise on fetlock joint moments during walking and trotting.</em> (International Society of Biomechanics Congress, 2025)</li>
-</ul>
-<hr>
-</section>
-<section id="finite-element-analysis-of-equine-bone-fracture-risk" class="level3">
-<h3 class="anchored" data-anchor-id="finite-element-analysis-of-equine-bone-fracture-risk">Finite Element Analysis of Equine Bone Fracture Risk</h3>
-<p><strong>Keywords:</strong> <code>Finite Element Analysis</code> <code>Abaqus</code> <code>ImageJ</code> <code>Biomechanics</code> <code>Bone Mechanics</code></p>
-<p>This research used subject-specific finite element modeling to investigate bone quality and stress distribution in the equine third metacarpal. By analyzing micro-CT data and creating detailed models, the project identified and characterized the mechanical factors that make specific regions more prone to fracture during high-speed locomotion.</p>
-<ul>
-<li><strong>Primary Presentation:</strong> <em>Bone quality differences in fracture-prone regions of the equine third metacarpal.</em> (Orthopaedic Research Society, 2021)</li>
-<li><strong>Related Presentation:</strong> <em>Development of a density-modulus relationship for juvenile equine bone.</em> (Orthopaedic Research Society, 2021)</li>
-</ul>
-<hr>
-</section>
-<section id="accessible-markerless-motion-capture-pipeline" class="level3">
-<h3 class="anchored" data-anchor-id="accessible-markerless-motion-capture-pipeline">Accessible Markerless Motion Capture Pipeline</h3>
-<p><strong>Keywords:</strong> <code>Computer Vision</code> <code>DeepLabCut</code> <code>Open-Source</code> <code>Python</code> <code>Photogrammetry</code></p>
-<p>Engineered a low-cost, accessible motion capture system using two consumer-grade cameras and open-source software. This work demonstrates that accurate 3D motion data can be obtained without expensive, specialized equipment, lowering the barrier to entry for biomechanical analysis in clinical, athletic, and research settings.</p>
-<ul>
-<li><strong>Primary Presentation:</strong> <em>Affordable and versatile markerless motion capture using two cameras and open-source software.</em> (University of Illinois Undergraduate Research Symposium, 2024)</li>
+<li><strong>Presentation:</strong> <em>Bone quality differences in fracture-prone regions of the equine third metacarpal</em> (Orthopaedic Research Society, 2021)</li>
 </ul>
 
 
