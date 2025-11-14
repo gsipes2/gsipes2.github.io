@@ -194,6 +194,12 @@ window.Quarto = {
   <ul>
   <li><a href="#signal-processing-for-biomechanics-force-plate-balance-analysis-tutorial" id="toc-signal-processing-for-biomechanics-force-plate-balance-analysis-tutorial" class="nav-link active" data-scroll-target="#signal-processing-for-biomechanics-force-plate-balance-analysis-tutorial">Signal Processing for Biomechanics: Force-Plate Balance Analysis Tutorial</a>
   <ul class="collapse">
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning objectives</a></li>
+  <li><a href="#notebook-flow" id="toc-notebook-flow" class="nav-link" data-scroll-target="#notebook-flow">Notebook flow</a></li>
+  <li><a href="#data-note" id="toc-data-note" class="nav-link" data-scroll-target="#data-note">Data note</a></li>
+  <li><a href="#reproducibility-reporting-reminders" id="toc-reproducibility-reporting-reminders" class="nav-link" data-scroll-target="#reproducibility-reporting-reminders">Reproducibility &amp; reporting reminders</a>
+  <ul class="collapse">
   <li><a href="#environment-setup-what-this-cell-does-and-why-it-matters" id="toc-environment-setup-what-this-cell-does-and-why-it-matters" class="nav-link" data-scroll-target="#environment-setup-what-this-cell-does-and-why-it-matters">Environment setup — what this cell does and why it matters</a></li>
   <li><a href="#download-load-eoec-data-what-this-cell-does" id="toc-download-load-eoec-data-what-this-cell-does" class="nav-link" data-scroll-target="#download-load-eoec-data-what-this-cell-does">Download &amp; load EO/EC data (what this cell does)</a></li>
   <li><a href="#what-is-a-force-plate" id="toc-what-is-a-force-plate" class="nav-link" data-scroll-target="#what-is-a-force-plate">What is a force plate?</a></li>
@@ -208,6 +214,7 @@ window.Quarto = {
   <li><a href="#synthetic-signal-demo-what-to-look-for" id="toc-synthetic-signal-demo-what-to-look-for" class="nav-link" data-scroll-target="#synthetic-signal-demo-what-to-look-for">Synthetic signal demo — what to look for</a></li>
   <li><a href="#interactive-slider-how-to-use-and-what-to-observe" id="toc-interactive-slider-how-to-use-and-what-to-observe" class="nav-link" data-scroll-target="#interactive-slider-how-to-use-and-what-to-observe">Interactive slider — how to use and what to observe</a></li>
   <li><a href="#choosing-a-cumulative-power-threshold" id="toc-choosing-a-cumulative-power-threshold" class="nav-link" data-scroll-target="#choosing-a-cumulative-power-threshold">Choosing a cumulative power threshold</a></li>
+  </ul></li>
   <li><a href="#convert-measured-voltages-to-forces-and-moments" id="toc-convert-measured-voltages-to-forces-and-moments" class="nav-link" data-scroll-target="#convert-measured-voltages-to-forces-and-moments">Convert measured voltages to forces and moments</a></li>
   <li><a href="#filtering-and-selecting-cutoff-frequencies-practical-guide" id="toc-filtering-and-selecting-cutoff-frequencies-practical-guide" class="nav-link" data-scroll-target="#filtering-and-selecting-cutoff-frequencies-practical-guide">Filtering and selecting cutoff frequencies — practical guide</a></li>
   <li><a href="#center-of-pressure-cop-calculation-and-stabilogram-plotting" id="toc-center-of-pressure-cop-calculation-and-stabilogram-plotting" class="nav-link" data-scroll-target="#center-of-pressure-cop-calculation-and-stabilogram-plotting">Center of Pressure (CoP) — calculation and stabilogram plotting</a></li>
@@ -231,12 +238,44 @@ window.Quarto = {
 <section id="signal-processing-for-biomechanics-force-plate-balance-analysis-tutorial" class="level1">
 <h1>Signal Processing for Biomechanics: Force-Plate Balance Analysis Tutorial</h1>
 <p>This notebook teaches the fundamentals of signal processing using a common biomechanics example: force‑plate data for postural/balance analysis. It is intended to give hands‑on experience with signal processing by converting raw force‑plate voltages into meaningful balance metrics (e.g., CoP stabilograms, excursion ranges, CoP speed).</p>
-<p>Prerequisites - Basic Python experience (pandas, numpy, matplotlib). - Familiarity with time series concepts (sampling rate, basic plotting) is helpful but not required — the notebook introduces essential signal‑processing ideas as we go.</p>
-<p>Learning objectives - Load and inspect force‑plate time series (voltages). - Convert voltages to forces/moments using a calibration matrix and amplifier settings. - Use power spectral density (PSD) to choose data‑driven low‑pass filter cutoffs (cumulative power). - Apply zero‑phase Butterworth filtering. - Compute Center of Pressure (CoP), visualize stabilograms, and calculate scalar sway metrics (AP/ML range, mean CoP speed, excursion statistics).</p>
-<p>Notebook flow 1. Environment &amp; helper functions (imports, plotting, download). 2. Data loading and basic inspection. 3. Spectral methods to select filter cutoffs and filtering helpers. 4. Convert voltages → forces/moments and compute CoP. 5. Visualize stabilograms and compute balance metrics; compare conditions (e.g., eyes open vs closed).</p>
-<p>Data note - Example files in this notebook use tandem‑stance (one foot in front of the other) balance tests under two conditions (eyes‑open vs eyes‑closed) to illustrate typical contrasts. Replace the example URLs/files with your own data as needed.</p>
-<p>Reproducibility &amp; reporting reminders - Record sampling rate, filter design (type, order), and cutoff selection method when sharing results.</p>
-<p>Takeaway: follow a data‑driven, visual workflow — check raw signals, inspect PSDs, choose cutoffs with diagnostics, apply zero‑phase filtering when possible, and document everything.</p>
+<section id="prerequisites" class="level2">
+<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
+<ul>
+<li>Basic Python experience (pandas, numpy, matplotlib).</li>
+<li>Familiarity with time series concepts (sampling rate, basic plotting) is helpful but not required — the notebook introduces essential signal‑processing ideas as we go.</li>
+</ul>
+</section>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning objectives</h2>
+<ul>
+<li>Load and inspect force‑plate time series (voltages).</li>
+<li>Convert voltages to forces/moments using a calibration matrix and amplifier settings.</li>
+<li>Use power spectral density (PSD) to choose data‑driven low‑pass filter cutoffs (cumulative power).</li>
+<li>Apply zero‑phase Butterworth filtering.</li>
+<li>Compute Center of Pressure (CoP), visualize stabilograms, and calculate scalar sway metrics (AP/ML range, mean CoP speed, excursion statistics).</li>
+</ul>
+</section>
+<section id="notebook-flow" class="level2">
+<h2 class="anchored" data-anchor-id="notebook-flow">Notebook flow</h2>
+<ol type="1">
+<li>Environment &amp; helper functions (imports, plotting, download).</li>
+<li>Data loading and basic inspection.</li>
+<li>Spectral methods to select filter cutoffs and filtering helpers.</li>
+<li>Convert voltages → forces/moments and compute CoP.</li>
+<li>Visualize stabilograms and compute balance metrics; compare conditions (e.g., eyes open vs closed).</li>
+</ol>
+</section>
+<section id="data-note" class="level2">
+<h2 class="anchored" data-anchor-id="data-note">Data note</h2>
+<ul>
+<li>Example files in this notebook use tandem‑stance (one foot in front of the other) balance tests under two conditions (eyes‑open vs eyes‑closed) to illustrate typical contrasts. Replace the example URLs/files with your own data as needed.</li>
+</ul>
+</section>
+<section id="reproducibility-reporting-reminders" class="level2">
+<h2 class="anchored" data-anchor-id="reproducibility-reporting-reminders">Reproducibility &amp; reporting reminders</h2>
+<ul>
+<li>Record sampling rate, filter design (type, order), and cutoff selection method when sharing results.</li>
+</ul>
 <section id="environment-setup-what-this-cell-does-and-why-it-matters" class="level3">
 <h3 class="anchored" data-anchor-id="environment-setup-what-this-cell-does-and-why-it-matters">Environment setup — what this cell does and why it matters</h3>
 <p>This small section ensures the Python environment has the packages used in the notebook and documents why each is needed. Key points:</p>
@@ -1153,6 +1192,7 @@ Example: if fs = 1000 Hz, Nyquist = 500 Hz. - Why it matters: the Nyquist freque
 <pre><code>(None,)</code></pre>
 </div>
 </div>
+</section>
 </section>
 <section id="convert-measured-voltages-to-forces-and-moments" class="level2">
 <h2 class="anchored" data-anchor-id="convert-measured-voltages-to-forces-and-moments">Convert measured voltages to forces and moments</h2>
