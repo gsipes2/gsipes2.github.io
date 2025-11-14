@@ -76,14 +76,14 @@ def main():
             f.write('No tutorials found.\n')
 
     proj_path = ROOT / 'projects.qmd'
-    with open(proj_path, 'w', encoding='utf-8') as f:
-        f.write('---\ntitle: Projects\nformat: html\n---\n\n')
-        f.write('## Projects\n\n')
-        if projects:
-            for t, l in projects:
-                f.write(f'- [{t}]({l})\n')
-        else:
-            f.write('No projects found.\n')
+    # with open(proj_path, 'w', encoding='utf-8') as f:
+    #     f.write('---\ntitle: Projects\nformat: html\n---\n\n')
+    #     f.write('## Projects\n\n')
+    #     if projects:
+    #         for t, l in projects:
+    #             f.write(f'- [{t}]({l})\n')
+    #     else:
+    #         f.write('No projects found.\n')
 
     print(f'Wrote {len(tutorials)} tutorials and {len(projects)} projects.')
 

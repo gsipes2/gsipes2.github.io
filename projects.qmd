@@ -1,6 +1,56 @@
 ---
-title: Projects
+title: "Projects"
 format: html
 ---
 
-No projects found.
+### Kinematics-Based Load Prediction in Handcycling
+
+**Keywords:** `Machine Learning` `Biomechanics` `Python` `PyTorch` `Sensors`
+
+This project developed machine learning models to estimate external loads during handcycle propulsion using only kinematic data. By leveraging arm segment accelerations, this work provides a method to monitor training loads and understand propulsion mechanics outside of a laboratory setting, without the need for force-instrumented equipment.
+
+*   **Primary Publication:** *Sipes G, Lee M, Halloran K, Rice I, Kersh M. Kinematics-based predictions of external loads during handcycling. Sensors, 2024 (Invited).*
+*   **Related Presentation:** *Estimating hand reaction forces from arm segment accelerations during handcycle propulsion using machine learning.* (International Society of Biomechanics Congress, 2023)
+
+---
+
+### Smartwatch-Based Wheelchair Propulsion Analysis
+
+**Keywords:** `Wearable Sensors` `Machine Learning` `Accessibility` `Python` `Biomechanics`
+
+A pilot study to create an accessible tool for quantifying manual wheelchair propulsion. This project involves predicting critical kinetic metrics (forces and moments) directly from smartwatch sensor data. The goal is to develop a low-cost, user-friendly method for long-term monitoring of propulsion biomechanics to help reduce the risk of upper limb injuries.
+
+*   **Primary Presentation:** *Predicting manual wheelchair propulsion kinetics using smartwatch data: a pilot study.* (MRC Annual Symposium, Washington University in St. Louis, 2025)
+*   **Related Presentation:** *Evaluation of propulsion biomechanics during exercise with a suspended-wheel everyday wheelchair.* (American Society of Biomechanics Annual Meeting, 2024)
+
+---
+
+### Statistical Estimation of Equine Ground Reaction Forces
+
+**Keywords:** `Machine Learning` `Gait Analysis` `Scikit-learn` `Equine Biomechanics`
+
+Focused on developing non-invasive methods for biomechanical analysis in veterinary medicine. This project created and compared statistical and machine learning models to predict ground reaction forces on the forelimbs of walking and trotting foals, using kinematic and anthropometric data as inputs.
+
+*   **Primary Publication:** *Opolz M, Sipes G, Moshage S, McCoy A, Kersh M. Statistical approaches for estimating forelimb ground reaction forces in foals during walking and trotting. Journal of Biomechanics, 2025 (Submitted).*
+*   **Related Presentation:** *The effect of exercise on fetlock joint moments during walking and trotting.* (International Society of Biomechanics Congress, 2025)
+
+---
+
+### Finite Element Analysis of Equine Bone Fracture Risk
+
+**Keywords:** `Finite Element Analysis` `Abaqus` `ImageJ` `Biomechanics` `Bone Mechanics`
+
+This research used subject-specific finite element modeling to investigate bone quality and stress distribution in the equine third metacarpal. By analyzing micro-CT data and creating detailed models, the project identified and characterized the mechanical factors that make specific regions more prone to fracture during high-speed locomotion.
+
+*   **Primary Presentation:** *Bone quality differences in fracture-prone regions of the equine third metacarpal.* (Orthopaedic Research Society, 2021)
+*   **Related Presentation:** *Development of a density-modulus relationship for juvenile equine bone.* (Orthopaedic Research Society, 2021)
+
+---
+
+### Accessible Markerless Motion Capture Pipeline
+
+**Keywords:** `Computer Vision` `DeepLabCut` `Open-Source` `Python` `Photogrammetry`
+
+Engineered a low-cost, accessible motion capture system using two consumer-grade cameras and open-source software. This work demonstrates that accurate 3D motion data can be obtained without expensive, specialized equipment, lowering the barrier to entry for biomechanical analysis in clinical, athletic, and research settings.
+
+*   **Primary Presentation:** *Affordable and versatile markerless motion capture using two cameras and open-source software.* (University of Illinois Undergraduate Research Symposium, 2024)
