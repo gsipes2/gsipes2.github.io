@@ -165,7 +165,7 @@
     "href": "notebooks/IntroductionImageProcessing.html#what-youll-learn",
     "title": "Introduction to Image Processing",
     "section": "What you’ll learn",
-    "text": "What you’ll learn\n\nHow images are represented (pixels, channels, color spaces)\nBasic transforms: resizing, rotating, and cropping\nFilters: blur, sharpen, edge detection, and morphological ops\nHow to inspect image statistics using histograms\nHow to detect objects and faces using modern libraries\nPractical tips for tuning parameters and debugging outputs"
+    "text": "What you’ll learn\n\nHow images are represented (pixels, channels, color spaces)\nBasic transforms: resizing, rotating, and cropping\nHow to inspect image statistics using histograms\nFilters: blur, sharpen, edge detection, and morphological operations"
   },
   {
     "objectID": "notebooks/IntroductionImageProcessing.html#requirements",
